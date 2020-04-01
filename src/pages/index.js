@@ -39,10 +39,10 @@ const IndexPage = () => (
                 <p>Telling stories through comics is one of the most rewarding, difficult, and fun forms of storytelling. I've worked on a number of comics in many different capacities. Currently I'm working on a comic called Near the Wind about anthropomorphic pirates. I'm also making an attempt to draw every day. I sometimes achieve that goal. You can check out some of my cartoons below.</p>
             </div>
             <ul className="comics-links">
-                <li>Near the Wind</li>
-                <li>Change Log</li>
-                <li>Sector Four</li>
-                <li>As the Grass grows</li>
+                <li><a href="https://www.nearthewind.com/" target="_blank" className="comic-ntw" title="Near the Wind"><span>Near the Wind</span></a></li>
+                <li><a href="https://changelogcomic.com/" target="_blank" className="comic-cl" title="Change Log"><span>Change Log</span></a></li>
+                <li><a href="http://sectorfour.com/" target="_blank" className="comic-s4" title="Sector Four"><span>Sector Four</span></a></li>
+                <li><a href="http://www.asthegrassgrows.com/" target="_blank" className="comic-atgg" title="As the Grass Grows"><span>As the<br />Grass Grows</span></a></li>
             </ul>
         </div>
     </section>

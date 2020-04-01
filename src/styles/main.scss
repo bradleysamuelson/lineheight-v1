@@ -46,15 +46,15 @@ header {
 .utility-nav {
     position: absolute; 
     right: 0;
-    top: 4px;
+    top: 8px;
     display: flex;
     
     .lh-icon {
-        width: 32px;
-        height: 32px;
+        width: 26px;
+        height: 26px;
     }
     a:not(:last-child) {
-        margin-right: 0.5rem;
+        margin-right: 0.75rem;
     }
 }
 .lh-icon {
@@ -85,10 +85,14 @@ header {
     color: #fff;
 }
 
-.comics, .cartoons, .code, .overview, .footer, .header {
+.comics, .cartoons, .code, .overview, .footer, .header, .secondary {
     &-content {
         margin: 0 auto;
         max-width: 960px;
+
+        h2 {
+            padding: 0.5rem 0;
+        }
     }
 }
 
@@ -110,9 +114,7 @@ header {
         }
     }
 }
-.overview-1 {
-    flex-grow: 2;
-}
+
 .overview-copy {
     padding: 2rem 0;
     font-size: 1.5rem;
@@ -130,6 +132,7 @@ header {
         padding: 0.5rem 1rem;
         &:hover {
             background-color: var(--lh-salmon-hover);
+            cursor: pointer;
         }
         &:focus {
             outline: none;
@@ -145,11 +148,105 @@ header {
         }
     }
 }
-.overview-2 {
-    flex-grow: 0;
-}
+
 .overview-brad {
     height: 100%;
     max-height: 600px;
     width: auto;
+}
+
+.comics-content {
+    display: flex;
+}
+.comics-links {
+    li {
+        display: block;
+        width: 400px;
+        height: 80px;
+        background-color: var(--lh-teal-dark);
+    }
+    .comic {
+        &-ntw,
+        &-cl,
+        &-s4,
+        &-atgg {
+            display: block;
+            width: 400px;
+            height: 80px;
+            background-size: cover;
+            background-color: var(--lh-teal-darker);
+            background-blend-mode: luminosity;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            position: relative; 
+
+            &:hover {
+                background-color: var(--lh-blue);
+            }
+
+            span {
+                position: absolute;
+                filter: drop-shadow(0 1px 1px var(--lh-black));
+            }
+        }
+    }
+    .comic-ntw {
+        background-image: url(https://bxlfwq.dm.files.1drv.com/y4mugdjKXe5DNHKvykKAS3TLIA7RwUeNEs17MWXYZyEGSRePO8QTKckLaUZp60WFurH_Vmob85Vs80luywhzGtW4PY7q1-bkSUgt3nN1cNWUV-wQef1MzPSw_Jc1gsPmzyq-eLoONQ8oSaor-laPjD6UFQIalglX6vdgAHL8ypAppuMpm_pKN4SRzknI0vc-Y2M);
+        span {
+            right: 10px;
+            font-size: 24px;
+            top: 8px;
+            width: 80px;
+            line-height: 0.85;
+            text-align: right;
+        }
+    }
+    .comic-cl {
+        background-image: url(https://osl2fa.dm.files.1drv.com/y4m_Qj3qNBQ2CRWgjWHlI9LSL4iqMbli-WIOE86t0CRS7uG5HsITO6tOm-4Qfphi9c_zo80sRoMu8DSoiFAvEjFVkDRI7hMx6ehIKdKbceZZtiXR0MeARp67j9P9-SsBKiSycc7YoUBInGBLcTO64HxwyqnyugDt5N1XGAXMzjwoJzMD3zAd4lusqBf-zP3tlrA);
+        span {
+            right: 10px;
+            font-size: 24px;
+            top: 16px;
+            width: 100px;
+            line-height: 0.85;
+            text-align: right;
+        }
+    }
+    .comic-s4 {
+        background-image: url(https://1j0dhw.dm.files.1drv.com/y4mm4TL8ILlPOy4tA3YKeMXXw4KxEZDCJZz0qFEQB3dknfk4ggDbmj2myi-SEN6n1sWnSf83OAWVuACCHDDtFbcIFU2PMAITJef88iOuGFB16Momt6MfAZMJNItwLMFcjBTbeAst-jBGjJf1EONzCQFfFKnGipSm6rO1DrJz1cVXbexnpdnoKINvsE867BEdRbt);
+        span {
+            left: 10px;
+            font-size: 24px;
+            top: 16px;
+            width: 100px;
+            line-height: 0.85;
+        }
+    }
+    .comic-atgg {
+        background-image: url(https://qpjgcq.dm.files.1drv.com/y4mqF7qL3jPO6xG04PesPmLzrGxTvwSe2Rq1-iP9hnzSvrh2o2O1NfQ9ebXRV4RvaiZTmCuj_wW0Z1QuYkQjij09g9AYoILWDawJOvmPFuO8bIHw5HHSb7huzsdEB7EZ_3Repsiz5rIQY7BLl4K9kr81Tpt1_xKIlmIc3Nl84ZaeJyNjciE3uaVX6J1ajPGNLBq);
+        span {
+            left: 10px;
+            font-size: 24px;
+            top: 16px;
+            width: 200px;
+            line-height: 0.85;
+        }
+    }
+}
+
+.secondary-content {
+    padding: 80px 0 0;
+    height: calc(100vh - 40px);
+    justify-content: space-between;
+    position: relative;
+    .utility-nav {
+        a {
+            color: var(--lh-black);
+        }
+    }
+}
+
+.secondary-page-logo {
+    margin-bottom: 80px;
 }

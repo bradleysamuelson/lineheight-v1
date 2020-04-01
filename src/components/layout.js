@@ -17,19 +17,6 @@ import "./layout.css"
 const Layout = ({ children }) => {
   const [scrollY, setScrollY] = React.useState(0);
 
-  // function checkScroll() {
-  //   if (window.scrollY < 0) {
-  //     setIsTop(false);
-  //     console.log("top");
-  //   } else {
-  //     setIsTop(true);
-  //     console.log("not top");
-  //   }
-  // };
-
-  // React.useEffect(() => {
-  //   window.addEventListener("scroll", checkScroll())
-  // });
   React.useLayoutEffect(() => {
     const handleScroll = e => {
       setScrollY(window.scrollY)
