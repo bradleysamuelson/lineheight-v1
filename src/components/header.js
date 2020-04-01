@@ -1,33 +1,19 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import { UtilityNav } from "./utility-nav"
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <header>
+      <div className="header-content">
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
         >
-          {siteTitle}
+          <img src="https://osl0fa.dm.files.1drv.com/y4mqq8WAwhh-ZeBXEMGjRi2c3DHwcGHVnvS5EcLvbaI4XZGV7eqHhBpg4MxTi85QOXMeTTaXNe-uxlTFQ6WQzk5T3N49MgaBO-HsjnqV8H42t7uN1ue9jLSghgDOFA6p0bvAvBuYv6-V3Y43KswBQWSmMoGJADxYtgidDazo2i5RfX9CEX6xLG4dfdMVzBfJjS4" alt="Line Height" className="header-logo" />
         </Link>
-      </h1>
-    </div>
+        <UtilityNav />
+      </div>
   </header>
 )
 

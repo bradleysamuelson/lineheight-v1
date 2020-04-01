@@ -5,14 +5,53 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import * as React from 'react';
+import cx from 'classnames';
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  const [scrollY, setScrollY] = React.useState(0);
+
+  // function checkScroll() {
+  //   if (window.scrollY < 0) {
+  //     setIsTop(false);
+  //     console.log("top");
+  //   } else {
+  //     setIsTop(true);
+  //     console.log("not top");
+  //   }
+  // };
+
+  // React.useEffect(() => {
+  //   window.addEventListener("scroll", checkScroll())
+  // });
+  React.useLayoutEffect(() => {
+    const handleScroll = e => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const headerClass = cx(
+    'header-container',
+    { 'header-container--visible': scrollY > 0 }
+  );
+
+  const contentClass = cx(
+    'content-wrapper',
+    { 'content-class--scrolled': scrollY > 0 } 
+  );
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,20 +64,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <div className={headerClass}>
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </div>
+      <div className={contentClass}>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div className="footer-content">
+            Copyright © {new Date().getFullYear()} Bradley Samuelson | <Link to="/privacy/">Privacy Policy</Link>
+          </div>
         </footer>
       </div>
     </>
