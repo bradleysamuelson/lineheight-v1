@@ -13,18 +13,18 @@ export function CartoonGallery() {
     const photos = [
         {
           src: Cartoon1,
-          width: 1.25,
+          width: 1,
           height: 1
         },
         {
           src: Cartoon2,
-          width: 2.5,
+          width: 3,
           height: 3
         },
         {
           src: Cartoon3,
           width: 3,
-          height: 4
+          height: 3
         },
         {
           src: Cartoon4,

@@ -4,8 +4,10 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 import { UtilityNav } from "../components/utility-nav"
 import { CartoonGallery } from "../components/gallery"
+import { Email, GitHub } from '../components/icons';
 
 import "../styles/main.scss"
 
@@ -32,10 +34,11 @@ const IndexPage = () => (
             <UtilityNav />
         </div>
     </section>
-    <section className="comics-container" id="comics">
+    <section className="comics-container">
+        <a id="comics" className="page-anchor" />
         <div className="comics-content">
             <div className="comics-copy">
-                <h2>Comics</h2>
+                <h2>Cartoons &amp; Comics</h2>
                 <p>Telling stories through comics is one of the most rewarding, difficult, and fun forms of storytelling. I've worked on a number of comics in many different capacities. Currently I'm working on a comic called Near the Wind about anthropomorphic pirates. I'm also making an attempt to draw every day. I sometimes achieve that goal. You can check out some of my cartoons below.</p>
             </div>
             <ul className="comics-links">
@@ -53,15 +56,32 @@ const IndexPage = () => (
             </div>
         </div>
     </section>
-    <section className="code-container" id="code">
+    <section className="code-container">
+        <a id="code" className="page-anchor" />
         <div className="code-content">
             <h2>Code</h2>
             <p>Coding is another form of storytelling. As a designer and engineer for the past 10+ years, my goal is to create user interfaces and experiences that help users understand the story and accomplish their goals as seamlessly and efficiently as possible. In working with other engineers (front-end, back-end, or full-stack) I've been able to successfully bridge the gap between the design and development sides of the story. This is where my focus has been lately, creating design systems(preamp.design), reusable components, style guides and CSS frameworks(mixer). If this is a need of you or your company, I'd love to connect to see if we'd be a good fit.
             </p>
-            <p>
-                Email me<br />
-                Github
-            </p>
+            <div className="code-1">
+                <ul className="code-actions">
+                    <li>
+                        <Link to="/portfolio" className="code-button">Examples</Link>
+                    </li>
+                    <li>
+                        <a href="mailto:brad@lineheight.co" className="code-button" title="Email">
+                            <Email /> Email Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bradleysamuelson/" className="code-button" target="_blank" title="GitHub">
+                            <GitHub /> GitHub
+                        </a>
+                    </li>
+                </ul>
+                <div className="code-brad">
+                    <img src="https://bxldwq.dm.files.1drv.com/y4mte0UdOCKfJdm5kis22fnyeq5qvLMVRiy27BqYMD5PA1HW4ROaSPJF_8GqZ40Xjbz3k59efVx3GwidXBMI6yygIKgqPDWxqblGr_IKTkWOOu5_KMmwIm0l4ZbF92s2qRKZy5Y3unruBdEYQQUUocc7GZ91-ALBvrqana0oBR65UoE6xMTxIoX2kuvPDGi2LdI" alt="Code" />
+                </div>
+            </div>
         </div>
     </section>
   </Layout>

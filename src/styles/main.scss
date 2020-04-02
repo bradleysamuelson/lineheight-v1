@@ -114,6 +114,13 @@ header {
         }
     }
 }
+.overview-1 {
+    width: 660px;
+}
+.overview-2 {
+    width: 300px;
+    text-align: right;
+}
 
 .overview-copy {
     padding: 2rem 0;
@@ -158,6 +165,9 @@ header {
 .comics-content {
     display: flex;
 }
+.comics-copy {
+    padding-right: 2rem;
+}
 .comics-links {
     li {
         display: block;
@@ -182,7 +192,7 @@ header {
             position: relative; 
 
             &:hover {
-                background-color: var(--lh-blue);
+                background-blend-mode: normal;
             }
 
             span {
@@ -234,6 +244,52 @@ header {
         }
     }
 }
+.code-1 {
+    display: flex;
+    position: relative;
+    min-height: 320px;
+}
+.code-brad {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 443px;
+    height: 400px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.code-actions {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 2rem;
+    li {
+        margin-bottom: 1rem;
+    }
+}
+.code-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: var(--lh-salmon);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family:'Baloo Bhai 2', sans-serif;
+    text-align: center;
+    width: 280px;
+    font-size: 1.5rem;
+    &:hover {
+        background-color: var(--lh-salmon-hover);
+    }
+    .lh-icon {
+        width: 1em;
+        height: 1em;
+        margin-right: 4px;
+    }
+}
 
 .secondary-content {
     padding: 80px 0 0;
@@ -249,4 +305,9 @@ header {
 
 .secondary-page-logo {
     margin-bottom: 80px;
+}
+
+.page-anchor {
+    position: relative;
+    top: -40px;
 }
