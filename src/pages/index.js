@@ -59,9 +59,20 @@ const IndexPage = () => (
     <section className="code-container">
         <a id="code" className="page-anchor" />
         <div className="code-content">
-            <h2>Code</h2>
-            <p>Coding is another form of storytelling. As a designer and engineer for the past 10+ years, my goal is to create user interfaces and experiences that help users understand the story and accomplish their goals as seamlessly and efficiently as possible. In working with other engineers (front-end, back-end, or full-stack) I've been able to successfully bridge the gap between the design and development sides of the story. This is where my focus has been lately, creating design systems(preamp.design), reusable components, style guides and CSS frameworks(mixer). If this is a need of you or your company, I'd love to connect to see if we'd be a good fit.
-            </p>
+            <div className="code-copy">
+                <h2>Code</h2>
+                <p>
+                    Coding is another form of storytelling. As a designer and engineer for the 
+                    past 10+ years, my goal is to create user interfaces and experiences that help 
+                    users understand the story and accomplish their goals as seamlessly and efficiently 
+                    as possible. In working with other engineers (front-end, back-end, or full-stack) 
+                    I've been able to successfully bridge the gap between the design and development 
+                    sides of the story. This is where my focus has been lately, 
+                    creating <a href="https://preamp.design" title="PreAmp Design System" target="_blank">design systems</a>, 
+                    reusable components, style guides and 
+                    CSS <a href="https://preamp.design/#/mixer/getting-started" target="_blank" title="Mixer">frameworks</a>. If this is a need of you or your company, I'd love to connect to see if we'd be a good fit.
+                </p>
+            </div>
             <div className="code-1">
                 <ul className="code-actions">
                     {/* TODO: put this back */}

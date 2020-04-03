@@ -292,11 +292,45 @@ header {
         }
     }
 }
+.code-content {
+    a {
+        color: var(--lh-teal);
+        &:hover {
+            color: var(--lh-teal-dark);
+        }
+    }
+    .code-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: var(--lh-salmon);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-family:'Baloo Bhai 2', sans-serif;
+        text-align: center;
+        width: 280px;
+        font-size: 1.5rem;
+        &:hover {
+            background-color: var(--lh-salmon-hover);
+        }
+        .lh-icon {
+            width: 1em;
+            height: 1em;
+            margin-right: 4px;
+        }
+        @media only screen and (max-width: $responsive-mobile) {
+            width: 100%;
+        }
+    }
+}
 .code-1 {
     display: flex;
     flex-direction: row-reverse;
     position: relative;
     min-height: 300px;
+    overflow: hidden;
     @media only screen and (max-width: $responsive-tablet) {
         display: block;
         min-height: auto;
@@ -329,31 +363,6 @@ header {
     }
     @media only screen and (max-width: $responsive-mobile) {
         margin-right: 0;
-    }
-}
-.code-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background: var(--lh-salmon);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-family:'Baloo Bhai 2', sans-serif;
-    text-align: center;
-    width: 280px;
-    font-size: 1.5rem;
-    &:hover {
-        background-color: var(--lh-salmon-hover);
-    }
-    .lh-icon {
-        width: 1em;
-        height: 1em;
-        margin-right: 4px;
-    }
-    @media only screen and (max-width: $responsive-mobile) {
-        width: 100%;
     }
 }
 
