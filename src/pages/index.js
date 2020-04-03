@@ -64,9 +64,10 @@ const IndexPage = () => (
             </p>
             <div className="code-1">
                 <ul className="code-actions">
-                    <li>
+                    {/* TODO: put this back */}
+                    {/* <li>
                         <Link to="/portfolio" className="code-button">Examples</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <a href="mailto:brad@lineheight.co" className="code-button" title="Email">
                             <Email /> Email Me

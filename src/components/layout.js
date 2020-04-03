@@ -58,7 +58,28 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer>
           <div className="footer-content">
-            Copyright © {new Date().getFullYear()} Bradley Samuelson | <Link to="/privacy/">Privacy Policy</Link>
+            <div className="footer-1">
+              <div className="footer-copy">
+                <h3>About Line Height</h3>
+                <p>
+                Line Height is the creative outlet of Brad Samuelson (me), a cartoonist and web developer. 
+                I have used my unique mix of skills to help clients and push personal projects in fun and 
+                innovative directions. I've also used my combination of creativity and technical skills to 
+                help engineering teams focus on user experience, visual polish, and performance with clean 
+                scalable CSS and front-end development using a wide range of technologies.
+                </p>
+                <p>
+                For as long as I can remember, I've been drawing and creating stories. I began posting 
+                comics online in 2008 with my first comic strip, <em>As the Grass Grows.</em> In 2013, I created 
+                the sci-fi graphic novel, <em>Sector Four</em>, and followed that up with my humor strip, <em>Change Log</em>, 
+                in 2016. <em>Change Log</em> follows the antics and adventures of a technology journalist dog and his 
+                software developer (and human) roommate. I'm currently working on a pirate adventure comic called
+                <em>Near the Wind</em>, which I'll be releasing soon.
+                </p>
+              </div>
+              <div className="footer-image" />
+            </div>
+            <div className="copyright">Copyright © {new Date().getFullYear()} Bradley Samuelson | <Link to="/privacy/">Privacy Policy</Link></div>
           </div>
         </footer>
       </div>
