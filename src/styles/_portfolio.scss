@@ -1,0 +1,59 @@
+.portfolio-container {
+    display: flex;
+    margin-bottom: 2rem;
+    @media only screen and (max-width: $responsive-tablet) {
+        display: block;
+    }
+}
+.portfolio-menu {
+    width: 200px;
+    position: sticky;
+    top: 60px;
+    list-style: none;
+    font-size: 0.825rem;
+    font-weight: 600;
+    align-self: flex-start;
+    height: auto;
+    padding-right: 2rem;
+    li {
+        .portfolio-menu-button {
+            padding: 0.5rem 0.25rem;
+            border: none;
+            background: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 4px;
+            &:focus {
+                outline: none;
+                background-color: var(--lh-gray);
+            }
+            &:hover {
+                background-color: var(--lh-teal);
+            }
+        }
+    }
+    @media only screen and (max-width: $responsive-tablet) {
+        display: none;
+    }
+}
+.portfolio-content {
+    width: 760px;
+    h2 {
+        padding-top: 0;
+        line-height: 1.25;
+        color: var(--lh-black);
+    }
+    ul {
+        margin-top: 0;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+    section {
+        margin-bottom: 2rem;
+    }
+    @media only screen and (max-width: $responsive-tablet) {
+        width: 100%;
+    }
+}

@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 
 const PrivacyPolicy = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Privacy Policy" />
     <section className="secondary-container">
         <div className="secondary-content">
             <div className="secondary-page-logo">

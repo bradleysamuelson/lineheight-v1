@@ -1,0 +1,78 @@
+body {
+    background-color: var(--lh-lightgray);
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    color: var(--lh-teal-dark);
+    &:hover {
+        color: var(--lh-black);
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Baloo Bhai 2', sans-serif;
+}
+h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+header {
+    background: var(--lh-black-tl);
+    backdrop-filter: blur(4px);
+    height: 40px;
+    overflow: hidden;
+}
+.header-container {
+    transform: translateY(-40px);
+    transition: transform 0.25s ease;
+    z-index: 100;
+}
+.header-container--visible {
+    transform: translateY(0);
+    transition: transform 0.25s ease;
+}
+
+.header-content {
+    position: relative;
+    color: #fff;
+    a {
+        color: #fff;
+        &:hover {
+            color: var(--lh-lightgray);
+        }
+    }
+}
+.utility-nav {
+    position: absolute; 
+    right: 0;
+    top: 8px;
+    display: flex;
+    
+    .lh-icon {
+        width: 26px;
+        height: 26px;
+    }
+    a:not(:last-child) {
+        margin-right: 0.75rem;
+    }
+    @media only screen and (max-width: $responsive-desktop) {
+        right: 2rem;
+    }
+}
+.lh-icon {
+    fill: currentColor;
+}
+.logo-lg {
+    width: 400px;
+    height: auto;
+    @media only screen and (max-width: $responsive-mobile) {
+        width: 100%;
+    }
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+}

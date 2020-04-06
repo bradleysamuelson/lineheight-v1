@@ -22,7 +22,7 @@ const IndexPage = () => (
                 Cartoons and Code can seem like an odd pairing, however at their essence, both disciplines are about solving problems and telling stories. I'm passionate about both.
                 </div>
                 <div className="overview-buttons">
-                    <button onClick={() => scrollTo('#comics', 100)}>More About Cartoons</button>
+                    <button onClick={() => scrollTo('#comics')}>More About Cartoons</button>
                     <button onClick={() => scrollTo('#code')}>More About Code</button>
                 </div>
             </div>
@@ -42,10 +42,10 @@ const IndexPage = () => (
                 <p>Telling stories through comics is one of the most rewarding, difficult, and fun forms of storytelling. I've worked on a number of comics in many different capacities. Currently I'm working on a comic called Near the Wind about anthropomorphic pirates. I'm also making an attempt to draw every day. I sometimes achieve that goal. You can check out some of my cartoons below.</p>
             </div>
             <ul className="comics-links">
-                <li><a href="https://www.nearthewind.com/" target="_blank" className="comic-ntw" title="Near the Wind"><span>Near the Wind</span></a></li>
-                <li><a href="https://changelogcomic.com/" target="_blank" className="comic-cl" title="Change Log"><span>Change Log</span></a></li>
-                <li><a href="http://sectorfour.com/" target="_blank" className="comic-s4" title="Sector Four"><span>Sector Four</span></a></li>
-                <li><a href="http://www.asthegrassgrows.com/" target="_blank" className="comic-atgg" title="As the Grass Grows"><span>As the<br />Grass Grows</span></a></li>
+                <li><a href="https://www.nearthewind.com/" target="_blank" className="comic-ntw" title="Near the Wind" rel="noopener noreferrer"><span>Near the Wind</span></a></li>
+                <li><a href="https://changelogcomic.com/" target="_blank" className="comic-cl" title="Change Log" rel="noopener noreferrer"><span>Change Log</span></a></li>
+                <li><a href="http://sectorfour.com/" target="_blank" className="comic-s4" title="Sector Four" rel="noopener noreferrer"><span>Sector Four</span></a></li>
+                <li><a href="http://www.asthegrassgrows.com/" target="_blank" className="comic-atgg" title="As the Grass Grows" rel="noopener noreferrer"><span>As the<br />Grass Grows</span></a></li>
             </ul>
         </div>
     </section>
@@ -68,17 +68,16 @@ const IndexPage = () => (
                     as possible. In working with other engineers (front-end, back-end, or full-stack) 
                     I've been able to successfully bridge the gap between the design and development 
                     sides of the story. This is where my focus has been lately, 
-                    creating <a href="https://preamp.design" title="PreAmp Design System" target="_blank">design systems</a>, 
+                    creating <a href="https://preamp.design/#/core/buttons/Button" title="PreAmp Design System" target="_blank" rel="noopener noreferrer">design systems</a>, 
                     reusable components, style guides and 
-                    CSS <a href="https://preamp.design/#/mixer/getting-started" target="_blank" title="Mixer">frameworks</a>. If this is a need of you or your company, I'd love to connect to see if we'd be a good fit.
+                    CSS <a href="https://preamp.design/#/mixer/getting-started" target="_blank" title="Mixer" rel="noopener noreferrer">frameworks</a>. If this is a need of you or your company, I'd love to connect to see if we'd be a good fit.
                 </p>
             </div>
             <div className="code-1">
                 <ul className="code-actions">
-                    {/* TODO: put this back */}
-                    {/* <li>
-                        <Link to="/portfolio" className="code-button">Examples</Link>
-                    </li> */}
+                    <li>
+                        <Link to="/portfolio" className="code-button">Portfolio</Link>
+                    </li>
                     <li>
                         <a href="mailto:brad@lineheight.co" className="code-button" title="Email">
                             <Email /> Email Me
