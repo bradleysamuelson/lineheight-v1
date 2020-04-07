@@ -129,10 +129,15 @@
     padding-right: 2rem;
 }
 .comics-links {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     li {
         display: block;
         width: 400px;
-        height: 80px;
+        min-height: 80px;
+        height: 100%;
+        flex: 1;
         background-color: var(--lh-teal-dark);
         @media only screen and (max-width: $responsive-tablet) {
             width: 100%;
@@ -145,7 +150,8 @@
         &-atgg {
             display: block;
             width: 400px;
-            height: 80px;
+            min-height: 80px;
+            height: 100%;
             background-size: cover;
             background-color: var(--lh-teal-darker);
             background-blend-mode: luminosity;

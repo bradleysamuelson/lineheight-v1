@@ -13,7 +13,7 @@ import "../styles/main.scss"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Line Height" />
+    <SEO title="Cartoons and Code" />
     <section className="overview-container">
         <div className="overview-content">
             <div className="overview-1">
