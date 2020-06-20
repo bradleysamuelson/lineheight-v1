@@ -13,7 +13,7 @@
     color: #fff;
 }
 
-.comics, .cartoons, .code, .overview, .footer, .header, .secondary {
+.comics, .cartoons, .code, .overview, .footer, .header, .secondary, .announcement {
     &-content {
         margin: 0 auto;
         max-width: 960px;
@@ -33,17 +33,29 @@
     top: 0;
     width: 100%;
 }
+.overview-container {
+    border-top: 4px solid var(--lh-black);
+    @media only screen and (max-width: $responsive-tablet) {
+        border-top: 0;
+    }
+}
 .overview-content {
-    padding-top: 80px;
+    top: -4px;
     height: calc(100vh - 40px);
-    min-height: 500px;
-    max-height: 700px;
+    min-height: 400px;
+    max-height: 540px;
     display: flex;
     justify-content: space-between;
     position: relative;
     .utility-nav {
         a {
             color: var(--lh-blue);
+            text-decoration: none;
+            &.utility-link {
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
             &:hover {
                 color: var(--lh-black);
             }
@@ -53,6 +65,8 @@
         height: auto;
     }
     @media only screen and (max-width: $responsive-tablet) {
+        padding-top: 60px;
+        top: 0;
         display: block;
         padding-bottom: 2rem;
         max-height: none;
@@ -66,6 +80,9 @@
 }
 .overview-2 {
     width: 300px;
+    max-height: 540px;
+    position: relative;
+    top: 5%;
     text-align: right;
     @media only screen and (max-width: $responsive-tablet) {
         display: none;
@@ -117,6 +134,26 @@
     height: 100%;
     max-height: 600px;
     width: auto;
+}
+.announcement {
+    background: var(--lh-black);
+}
+.announcement-content {
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4 {
+        margin-right: 2rem;
+    }
+    @media only screen and (max-width: $responsive-mobile) {
+        display: block;
+        text-align: center;
+        h4 {
+            margin: 0 0 1rem;
+        }
+    }
 }
 
 .comics-content {
@@ -299,6 +336,12 @@
     .utility-nav {
         a {
             color: var(--lh-black);
+            text-decoration: none;
+            &.utility-link {
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
