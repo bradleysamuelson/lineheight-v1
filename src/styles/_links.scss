@@ -1,0 +1,15 @@
+.links-avatar {
+    width: 160px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    .code-button {
+        margin-bottom: 2rem;
+    }
+}
